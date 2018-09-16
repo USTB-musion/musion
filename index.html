@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MusionUI</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+    </style>
+    <style>
+        :root {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+        }
+    </style>
+    <style>
+        #app {
+            margin: 20px;
+        }
+        body {
+            font-size: var(--font-size)
+        }
+    </style>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <m-button>
+            按钮1
+        </m-button>
+        <m-button icon="setting">
+            按钮2
+        </m-button>
+        <m-button icon="setting" icon-position="right">
+            按钮3
+        </m-button>
+    </div> 
+    <script src="./src/app.js"></script>
+    <script src="//at.alicdn.com/t/font_839794_ojhgnou9eq8.js"></script>
+</body>
+</html>
