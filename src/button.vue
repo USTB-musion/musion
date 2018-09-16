@@ -1,8 +1,6 @@
 <template>
     <button class="m-button" :class="{[`icon-${iconPosition}`]: true}">
-        <svg v-if="icon" class="icon">
-            <use :xlink:href="`#icon-${icon}`"></use>
-        </svg> 
+        <m-icon v-if="icon" :name="icon" class="icon"></m-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -17,7 +15,11 @@ export default {
             type: String,
             default: 'left',
             validator(value) {
-                console.log(value)
+                if (value !== 'left' && value !== 'right') {
+                    return false
+                } else {
+                    return true
+                }
             }
         }
     }
