@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/USTB-JeeLee/musion/issues"
   },
-  "homepage": "https://github.com/USTB-JeeLee/musion#readme"
+  "homepage": "https://github.com/USTB-JeeLee/musion#readme",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
 }
