@@ -6,7 +6,13 @@
 
 <script>
 export default {
-
+    mounted() {
+        for(let node of this.$el.children) {
+            if (node.nodeName.toLowerCase() !== 'button') {
+                console.warn('m-button-group的子元素应该全是m-button')
+            }
+        }
+    }
 }
 </script>
 
