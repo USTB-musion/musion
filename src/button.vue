@@ -1,6 +1,7 @@
 <template>
-    <button class="m-button" :class="{[`icon-${iconPosition}`]: true}">
-        <m-icon v-if="icon" :name="icon" class="icon"></m-icon>
+    <button class="m-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+        <m-icon v-if="icon && !loading" :name="icon" class="icon"></m-icon>
+        <m-icon v-if="loading" name="loading" class="loading icon"></m-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -11,6 +12,10 @@
 export default {
     props: {
         icon: {},
+        loading: {
+            type: Boolean,
+            default: false
+        },
         iconPosition: {
             type: String,
             default: 'left',
@@ -27,6 +32,17 @@ export default {
 </script>
 
 <style lang="less">
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .loading {
+            animation: spin 2s infinite linear;
+        }
         .m-button {
             display: inline-flex;
             justify-content: center;

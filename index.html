@@ -37,17 +37,28 @@
 </head>
 <body>
     <div id="app">
-        <m-button icon="download">
+        <m-button icon="download" :loading="loading1" @click="loading1 = !loading1">
             按钮1
         </m-button>
-        <m-button icon="setting">
+        <m-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
             按钮2
         </m-button>
-        <m-button icon="setting" icon-position="right">
+        <m-button icon="loading" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
             按钮3
         </m-button>
+        <m-button-group>
+            <m-button icon="download" :loading="loading1" @click="loading1 = !loading1">
+                按钮4
+            </m-button>
+            <m-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
+                按钮5
+            </m-button>
+            <m-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
+                按钮6
+            </m-button>
+        </m-button-group>
     </div> 
     <script src="./src/app.js"></script>
-    <script src="//at.alicdn.com/t/font_839794_ojhgnou9eq8.js"></script>
+    <script src="//at.alicdn.com/t/font_839794_muyod6y6a3f.js"></script>
 </body>
 </html>
