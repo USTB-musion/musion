@@ -9,6 +9,9 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import Icon from './icon.vue'
+
 export default {
     props: {
         icon: {},
@@ -27,6 +30,9 @@ export default {
                 }
             }
         }
+    },
+    components: {
+        'm-icon': Icon
     }
 }
 </script>
