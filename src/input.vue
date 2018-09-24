@@ -1,6 +1,10 @@
 <template>
     <div class="wrapper" :class="{error}">
-        <input type="text" :value="value" :disabled="disabled" :readonly="readonly">
+        <input type="text" :value="value" :disabled="disabled" :readonly="readonly"
+            @change="$emit('change', $event)"
+            @input="$emit('input', $event)"
+            @focus="$emit('focus', $event)"
+            @blur="$emit('blur', $event)">
         <template v-if="error">
             <m-icon name="error" class="icon-error"/>
             <span class="error-message">{{error}}</span>
@@ -36,14 +40,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-            // --button-height: 32px;
-            // --font-size: 14px;
-            // --button-bg: white;
-            // --button-active-bg: #eee;
-            // --border-radius: 4px;
-            // --color: #333;
-            // --border-color: #999;
-            // --border-color-hover: #666;
     $height: 32px;
     $border-color: #999;
     $border-hover-color: #666;
@@ -64,6 +60,7 @@ export default {
             border-radius: $border-radius;
             padding: 0 8px;
             font-size: inherit;
+            outline: none;
             &:hover {
                 border-color: $border-hover-color;
             }
