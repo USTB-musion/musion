@@ -33,33 +33,46 @@
             width: 1em;
             height: 1em;
         }
+        .box {
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
     <div id="app">
-        <m-button icon="download" :loading="loading1" @click="loading1 = !loading1">
-            按钮1
-        </m-button>
-        <m-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
-            按钮2
-        </m-button>
-        <m-button icon="loading" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-            按钮3
-        </m-button>
-        <m-button-group>
+        <div class="box">
+            <m-input value="lijin" disabled></m-input>
+            <m-input value="lijin01"></m-input>
+            <m-input value="lijin01" readonly></m-input>
+        </div>
+        <div class="box">
+            <m-input value="lijin01" error="姓名不能少于两个字"></m-input>
+        </div>
+        <div class="box">
             <m-button icon="download" :loading="loading1" @click="loading1 = !loading1">
-                按钮4
+                按钮1
             </m-button>
             <m-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
-                按钮5
+                按钮2
             </m-button>
-            <m-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
-                按钮6
+            <m-button icon="loading" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
+                按钮3
             </m-button>
-        </m-button-group>
+            <m-button-group>
+                <m-button icon="download" :loading="loading1" @click="loading1 = !loading1">
+                    按钮4
+                </m-button>
+                <m-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
+                    按钮5
+                </m-button>
+                <m-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
+                    按钮6
+                </m-button>
+            </m-button-group>
+        </div>
         <div id="test"></div>
     </div> 
     <script src="./src/app.js"></script>
-    <script src="//at.alicdn.com/t/font_839794_muyod6y6a3f.js"></script>
+    <script src="//at.alicdn.com/t/font_839794_s8oahjuohw.js"></script>
 </body>
 </html>

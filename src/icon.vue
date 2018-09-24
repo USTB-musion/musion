@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
     .m-icon {
         width: 1em;
         height: 1em; 
