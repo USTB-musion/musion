@@ -46,7 +46,8 @@
             <m-input value="lijin01" readonly></m-input> -->
         </div>
         <div class="box">
-            <m-input value="lijin01" error="姓名不能少于两个字"></m-input>
+            <m-input value="lijin01" error="姓名不能少于两个字" v-model="message"></m-input>
+            <p>test: {{message}}</p>
         </div>
         <div class="box">
             <m-button icon="download" :loading="loading1" @click="loading1 = !loading1">
