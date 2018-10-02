@@ -37,14 +37,47 @@
             margin: 20px;
         }
     </style>
+    <style>
+        .demo {
+            border: 1px solid #666;
+            min-height: 100px;
+        }
+        .sider {
+            background: #333;
+            width: 150px;
+        }
+        .sider.slide-enter, .sider.slide-leave-to {
+            margin-left: -150px;
+        }
+        .header {
+            background: #999;
+            height: 100px;
+        }
+        .footer {
+            background: #ccc;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <m-row gutter="20">
-            <m-col span="8">345345</m-col>
-            <m-col span="8">3453453</m-col>
-            <m-col span="8">3453453</m-col>
+            <m-layout style="height: 100vh;">
+                <m-sider>sider</m-sider>
+                <m-layout>
+                    <m-header>header</m-header>
+                    <m-content>content</m-content>
+                    <m-footer>footer</m-footer>
+                </m-layout>
+            </m-layout>
+        <!-- <m-row :gutter="20" align="right">
+            <m-col span="6" :ipad="{span: 12}" :phone="{span: 6}">111</m-col>
+            <m-col span="6" :ipad="{span: 6}" :phone="{span: 6}">222</m-col>
+            <m-col span="6" :ipad="{span: 6}" :phone="{span: 12}">333</m-col>
         </m-row>
+        <m-row gutter="10">
+            <m-col span="8">123</m-col>
+            <m-col span="16">456</m-col>
+        </m-row> -->
         <!-- <div class="box">
             <m-input value="lijin01" error="姓名不能少于两个字" v-model="message"></m-input>
             <p>test: {{message}}</p>
