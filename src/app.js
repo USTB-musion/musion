@@ -12,6 +12,11 @@ import Sider from './sider.vue'
 import Footer from './footer.vue'
 import Toast from './toast.vue'
 import plugin from './plugin.js'
+import Tabs from './tabs.vue'
+import TabsHead from './tabs-head.vue'
+import TabsBody from './tabs-body.vue'
+import TabsPane from './tabs-pane.vue'
+import TabsItem from './tabs-item.vue'
 
 Vue.component('m-button', Button)
 Vue.component('m-icon', Icon)
@@ -25,6 +30,11 @@ Vue.component('m-content', Content)
 Vue.component('m-sider', Sider)
 Vue.component('m-footer', Footer)
 Vue.component('m-toast', Toast)
+Vue.component('m-tabs', Tabs)
+Vue.component('m-tabs-head', TabsHead)
+Vue.component('m-tabs-body', TabsBody)
+Vue.component('m-tabs-Pane', TabsPane)
+Vue.component('m-tabs-item', TabsItem)
 Vue.use(plugin)
 
 // import createElement from 'vue'
@@ -37,7 +47,8 @@ new Vue({
         loading1: false,
         loading2: false,
         loading3: false,
-        message: '123'
+        message: '123',
+        seletedTab: 'sports'
     },
     methods: {
         inputChange(e) {
