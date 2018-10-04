@@ -6,7 +6,14 @@
 
 <script>
 export default {
-    name: 'MusionPane'
+    name: 'MusionPane',
+    inject: ['eventBus'],
+    created() {
+        console.log('pane', this.eventBus)
+        this.eventBus.$on('update:selected', (name) => {
+            console.log('name', name)
+        })
+    }
 }
 </script>
 

@@ -33,7 +33,7 @@ Vue.component('m-toast', Toast)
 Vue.component('m-tabs', Tabs)
 Vue.component('m-tabs-head', TabsHead)
 Vue.component('m-tabs-body', TabsBody)
-Vue.component('m-tabs-Pane', TabsPane)
+Vue.component('m-tabs-pane', TabsPane)
 Vue.component('m-tabs-item', TabsItem)
 Vue.use(plugin)
 

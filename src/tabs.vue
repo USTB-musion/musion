@@ -5,8 +5,14 @@
 </template>
 
 <script>
+import Vue from 'vue'
 export default {
     name: 'MusionTabs',
+    data() {
+        return {
+            eventBus: new Vue()
+        }
+    },
     props: {
         selected: {
             type: String,
@@ -22,6 +28,11 @@ export default {
     },
     created() {
 
+    },
+    provide() {
+        return {
+            eventBus: this.eventBus
+        }
     }
 }
 </script>

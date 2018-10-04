@@ -7,7 +7,11 @@
 
 <script>
 export default {
-    name: 'MusionTabsHead'
+    name: 'MusionTabsHead',
+    inject: ['eventBus'],
+    created() {
+        console.log('head', this.eventBus)
+    }
 }
 </script>
 

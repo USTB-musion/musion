@@ -6,7 +6,11 @@
 
 <script>
 export default {
-    name: 'MusionBody'
+    name: 'MusionBody',
+    inject: ['eventBus'],
+    created() {
+        console.log('body', this.eventBus)
+    }
 }
 </script>
 
