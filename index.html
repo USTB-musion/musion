@@ -61,7 +61,13 @@
 </head>
 <body>
     <div id="app">
-        <m-tabs :selected.sync="seletedTab">
+        <m-popover>
+            <template slot="content">
+                <div>content</div> 
+            </template>
+            <button>点我</button>
+        </m-popover>
+        <!-- <m-tabs :selected.sync="seletedTab">
             <m-tabs-head>
                 <template slot="actions">
                     <button>设置</button>
@@ -87,7 +93,7 @@
                     front-end
                 </m-tabs-pane>
             </m-tabs-body>
-        </m-tabs>
+        </m-tabs> -->
             <!-- <button @click="showToast1">top</button>
             <button @click="showToast2">middle</button>
             <button @click="showToast3">bottom</button> -->
