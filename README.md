@@ -1,7 +1,5 @@
-# 一个类ElementUI的框架
-[![Build Status](https://www.travis-ci.org/USTB-JeeLee/musion.svg?branch=master)](https://www.travis-ci.org/USTB-JeeLee/musion)
 ### 写在前面
-先放上musionUI的代码仓库：[musionUI](https://github.com/USTB-musion/musion)。现在代码尚未写完，大概只完成了30%，持续更新中... 代码完成之后会写简单的说明文档。
+现在代码尚未写完，大概只完成了30%，持续更新中... 全部代码完成之后会写简单的说明文档。
 
 > 造了哪些轮子
 
@@ -148,3 +146,97 @@ data:{
 </m-layout>
 ```
 
+#### 4. 网格组件
+##### 预览
+
+![](https://user-gold-cdn.xitu.io/2018/10/12/166677992c5b7a73?w=766&h=253&f=png&s=10147)
+
+##### 代码使用
+``` HTML
+<m-row>
+  <m-col span="8">
+    <div>8</div>
+  </m-col>
+  <m-col span="8">
+    <div>8</div>
+  </m-col>
+  <m-col span="8">
+    <div>8</div>
+  </m-col>
+</m-row>
+
+<m-row>
+  <m-col span="6">
+    <div>6</div>
+  </m-col>
+  <m-col span="6">
+    <div>6</div>
+  </m-col>
+  <m-col span="6">
+    <div>6</div>
+  </m-col>
+  <m-col span="6">
+    <div>6</div>
+  </m-col>
+</m-row>
+
+<m-row>
+  <m-col span="4">
+    <div>4</div>
+  </m-col>
+  <m-col span="4">
+    <div>4</div>
+  </m-col>
+  <m-col span="4">
+    <div>4</div>
+  </m-col>
+  <m-col span="4">
+    <div>4</div>
+  </m-col>
+  <m-col span="4">
+    <div>4</div>
+  </m-col>
+  <m-col span="4">
+    <div>4</div>
+  </m-col>
+</m-row>
+
+<m-row>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+  <m-col span="2">
+    <div>2</div>
+  </m-col>
+</m-row>
+```
