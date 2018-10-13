@@ -61,11 +61,11 @@
 </head>
 <body>
     <div id="app" style="padding:30px">
-        <m-collapse>
-            <m-collapse-item title="11">11</m-collapse-item>
-            <m-collapse-item title="22">22</m-collapse-item>
-            <m-collapse-item title="33">33</m-collapse-item>
-        </m-collapse>
+            <m-collapse :selected.sync="selectedTab">
+                    <m-collapse-item title="标题1" name="1">内容1</m-collapse-item>
+                    <m-collapse-item title="标题2" name="2">内容2</m-collapse-item>
+                    <m-collapse-item title="标题3" name="3">内容3</m-collapse-item>
+            </m-collapse>
         <!-- <m-popover>
             <template slot="content">
                 <div>content</div> 
