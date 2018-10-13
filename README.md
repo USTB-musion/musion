@@ -13,6 +13,11 @@
 4. 参考现在社区比较成熟如ElementUI，Ant Design，Material UI这些UI轮子的API设计和样式布局。
 5. 该项目基于Vue2.x版本来开发和使用
 
+### 把项目跑起来
+1. git clone https://github.com/USTB-musion/musion.git
+2. cd musion / npm install
+3. npm start
+
 ### 说明文档
 ``` JS
 import Vue from 'vue'
