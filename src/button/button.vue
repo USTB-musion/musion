@@ -10,7 +10,7 @@
 
 <script>
 import Vue from 'vue'
-import Icon from './icon.vue'
+import Icon from '../icon/icon.vue'
 
 export default {
     props: {

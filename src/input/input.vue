@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import mIcon from './icon.vue'
+import mIcon from '../icon/icon.vue'
 export default {
     name: 'mInput',
     props: {
