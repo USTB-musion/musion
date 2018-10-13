@@ -1,7 +1,7 @@
 <template>
     <div class="collapse-item">
-        <div class="title">{{title}}</div>
-        <div class="content">
+        <div class="title" @click="open = !open">{{title}}</div>
+        <div class="content" v-if="open">
             <slot></slot>
         </div>
     </div>
@@ -16,6 +16,11 @@ export default {
             type: String,
             required: true
         }
+    },
+    data() {
+        return {
+            open: false
+        }
     }
 }
 </script>
@@ -25,11 +30,29 @@ export default {
     $border-radius: 4px;
     .collapse-item {
         > .title {
+            display: flex;
+            align-items: center;
+            min-height: 32px;
             border: 1px solid $grey;
-            border-radius: $border-radius;
             margin-top: -1px;
             margin-left: -1px;
             margin-right: -1px;
+            padding: 0 8px;
+        }
+        &:first-child {
+            > .title {
+                border-top-left-radius: $border-radius;
+                border-top-right-radius: $border-radius;
+            }
+        }
+        &:last-child {
+            > .title:last-child {
+                border-bottom-left-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;      
+            }
+        }
+        > .content {
+            padding: 8px;
         }
     }
 </style>
