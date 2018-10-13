@@ -17,6 +17,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    $font-size: 14px;
+    $button-height: 32px;
+    $button-bg: white;
+    $button-active-bg: #eee;
+    $border-radius: 4px;
+    $color: #333;
+    $border-color: #999;
+    $border-border-hover: #666;
     .m-button-group {
         display: inline-flex;
         vertical-align: middle;
@@ -26,12 +34,12 @@ export default {
                 margin-left: -1px;
             }
             &:first-child {
-                border-top-left-radius: var(--border-radius);
-                border-bottom-left-radius: var(--border-radius);
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
             }
             &:last-child {
-                border-top-right-radius: var(--border-radius);
-                border-bottom-right-radius: var(--border-radius);
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
             }
             &:hover {
                 position: relative;

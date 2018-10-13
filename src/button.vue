@@ -38,6 +38,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+        $font-size: 14px;
+        $button-height: 32px;
+        $button-bg: white;
+        $button-active-bg: #eee;
+        $border-radius: 4px;
+        $color: #333;
+        $border-color: #999;
+        $border-border-hover: #666;
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -53,20 +61,20 @@ export default {
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            height: var(--button-height);
-            font-size: var(--font-size);
+            height: $button-height;
+            font-size: $font-size;
             padding: 0 1em;
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border-color);
-            background: var(--button-bg);
+            border-radius: $border-radius;
+            border: 1px solid $border-color;
+            background: $button-bg;
             vertical-align: middle;
 
             &:hover {
-                border-color: var(--border-color-hover);
+                border-color: $border-border-hover;
             }
 
             &:active {
-                background-color: var(--button-active-bg);
+                background-color: $button-active-bg;
             }
 
             &:focus {
