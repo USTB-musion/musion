@@ -20,6 +20,7 @@ import TabsItem from './tabs/tabs-item.vue'
 import Popover from './popover/popover.vue'
 import Collapse from './collapse/collapse.vue'
 import CollapseItem from './collapse/collapse-item.vue'
+import Cascader from './cascader/cascader'
 
 Vue.component('m-button', Button)
 Vue.component('m-icon', Icon)
@@ -41,6 +42,7 @@ Vue.component('m-tabs-item', TabsItem)
 Vue.component('m-popover', Popover)
 Vue.component('m-collapse', Collapse)
 Vue.component('m-collapse-item', CollapseItem)
+Vue.component('m-cascader', Cascader)
 Vue.use(plugin)
 
 // import createElement from 'vue'
@@ -54,7 +56,36 @@ new Vue({
         loading2: false,
         loading3: false,
         message: '123',
-        selectedTab: ['2','1']
+        selectedTab: ['2','1'],
+        source: [
+            {
+                name: 'zejiang',
+                children: [
+                    { 
+                        name: 'hangzhou',
+                        children: [
+                            { name: 'shangcheng'},
+                            { name: 'xiacheng'},
+                            { name: 'jiaxing' }
+                        ]
+                    },
+                    { name: 'fuzhou' }
+                ]
+            },
+            {
+                name: 'guangdong',
+                children: [
+                    { 
+                        name: 'guangzhou',
+                        children: [
+                            { name: 'huangpu'},
+                            { name: 'yuexiu'}
+                        ]
+                    },
+                    { name: 'shenzhen' }
+                ]
+            }
+        ]
         // seletedTab: 'sports'
     },
     methods: {
