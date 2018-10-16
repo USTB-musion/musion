@@ -1,27 +1,30 @@
 <template>
     <div class="cascader">
-        <div class="trigger">
-            <slot></slot>
-        </div>
-        <div class="popover">
-            <div v-for="item in source" :key="item">
-                <cascader-item :sourceItem="item"></cascader-item>
-            </div>
+        <div class="trigger" @click="popoverVisible = !popoverVisible"></div>
+        <div class="popover" v-if="popoverVisible">
+            <cascader-items :items="source"></cascader-items>
         </div>
     </div>
 </template>
 
 <script>
-import CascaderItem from './cascader-item'
+import CascaderItems from './cascader-items'
 export default {
     name: 'MusionCascader',
+    data() {
+        return {
+            popoverVisible: false
+        }
+    },
+    computed: {
+    },
     props: {
         source: {
             type: Array
         }
     },
     components: {
-        CascaderItem
+        CascaderItems
     }
 }
 </script>
@@ -29,6 +32,15 @@ export default {
 <style scoped lang="scss">
     @import '../var';
     .cascader {
-
+        .trigger {
+            border: 1px solid red;
+            height: 32px;
+            width: 100px;
+        }
+        .popover {
+            border: 1px solid red;
+            height: 200px;
+            width: 80px;
+        }
     }
 </style>
