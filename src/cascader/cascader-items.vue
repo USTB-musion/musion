@@ -41,10 +41,13 @@ export default {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
+        height: 100px;
         .left {
+            height: 100%;
             border: 1px solid red; 
         }
         .right {
+            height: 100%;
             margin-top: -1px;
         }
     }
